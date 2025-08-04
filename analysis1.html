@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details - Unveiling Sales Excellence</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+    }
+    header {
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 0.5rem;
+    }
+    header h1 {
+      font-size: 1.75rem;
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #00695c;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: #b2dfdb;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ffffff;
+    }
+    section {
+      padding: 0.5rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2, h3 {
+      color: #004d40;
+    }
+    .section {
+      margin-bottom: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 0.6rem;
+      text-align: left;
+    }
+    th {
+      background-color: #004d40;
+      color: white;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      margin-top: 1rem;
+    }
+    .subheader {
+  font-size: 1rem;
+  color: #00695c;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.bullet-points {
+  margin-left: 1.2rem;
+  list-style-type: disc;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.bullet-points li {
+  margin-bottom: 0.4rem;
+}
+    footer {
+      text-align: center;
+      padding: 0.4rem;
+      background: #004d40;
+      color: white;
+      font-size: 0.85rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Unveiling Sales Excellence</h1>
+  </header>
+
+  <nav>
+    <a href="index.html#projects">Back to Projects</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
+  <section>
+    <div class="section">
+      <h2>Business Overview</h2>
+      <p>NovaMed Solutions is a pharmaceutical company involved in the manufacturing and distribution of essential medications.
+        Serves a diverse healthcare sector in terms of both types and classes, and has been operating for over 4 years.
+        This project involves analysing the company's performance data to identify trends, monitor KPIs, and uncover business opportunities. 
+        The dashboard provides a clear view of sales, profits, and category-level performance across regions.</p>
+    </div>
+
+    <div class="section">
+      <h2>Business Problem</h2>
+      <p>NovaMed Solutions is facing challenges in optimising sales performance, managing inventory efficiently, identifying key market opportunities, 
+        and ensuring the availability of essential medications. However, inefficiencies in demand forecasting, stock management, and customer engagement 
+        strategies have impacted operational effectiveness</p>
+    </div>
+
+    <div class="section">
+      <h2>Data Dictionary</h2>
+        <p>Data is in csv format</p>
+      <h3>1. Drug Information</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Column Headers</th>
+            <th>Data Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Drug ID</td>
+            <td>Text</td>
+            <td>Unique identifier for each drug</td>
+          </tr>
+          <tr>
+            <td>Regulatory Compliance ID</td>
+            <td>Text</td>
+            <td>Unique identifier for each drug group</td>
+          </tr>
+          <tr>
+            <td>Drug Name</td>
+            <td>Text</td>
+            <td>The name of each drug</td>
+          </tr>
+          <tr>
+            <td>Unit Sales Price</td>
+            <td>Numeric</td>
+            <td>Selling price per unit of the drug</td>
+          </tr>
+          <tr>
+            <td>Cost of Production</td>
+            <td>Numeric</td>
+            <td>Cost incurred to produce one unit of the drug</td>
+          </tr>
+          <tr>
+            <td>Treats</td>
+            <td>Text</td>
+            <td>The medical condition or illness the drug is used to treat</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>2. Customer Information</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Column Headers</th>
+            <th>Data Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Customer ID</td>
+            <td>Text</td>
+            <td>Unique customer identifier</td>
+          </tr>
+          <tr>
+            <td>First Name</td>
+            <td>Text</td>
+            <td>First name of the customer</td>
+          </tr>
+          <tr>
+            <tr>
+            <td>Last Name</td>
+            <td>Text</td>
+            <td>Last name of the customer</td>
+          </tr>
+          <tr>
+            <td>Age</td>
+            <td>Numeric</td>
+            <td>Age of the customer</td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>Text</td>
+            <td>Gender of the customer</td>
+          </tr>
+          <tr>
+            <td>Country</td>
+            <td>Text</td>
+            <td>The country where the customer is located</td>
+          </tr>
+          <tr>
+            <td>Customer Class</td>
+            <td>Text</td>
+            <td>The Class the customer belongs to</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>3. Sales Information</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Column Headers</th>
+            <th>Data Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Sales ID</td>
+            <td>Text</td>
+            <td>Unique identifier for each sale</td>
+          </tr>
+          <tr>
+            <td>Drug ID</td>
+            <td>Text</td>
+            <td>Unique identifier for the drug that was sold</td>
+          </tr>
+          <tr>
+            <td>Customer ID</td>
+            <td>Text</td>
+            <td>Unique identifier for the customer who made the purchase</td>
+          </tr>
+          <tr>
+            <td>Units Sold</td>
+            <td>Numeric</td>
+            <td>The quantity of the drug sold in the transaction</td>
+          </tr>
+          <tr>
+            <td>Sales Date</td>
+            <td>Date</td>
+            <td>The date on which the sale occurred</td>
+          </tr>
+          <tr>
+            <td>Buyer Type</td>
+            <td>Text</td>
+            <td>The type of the buyer</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Dashboard</h2>
+      <iframe title="NovaMed Solutions Performance Analysis" width="1024" height="1060" src="https://app.powerbi.com/view?r=eyJrIjoiN2Q2NTg0NGItMGQzOS00NTM1LWIzNWYtMTZkYzVjMTIzNDNiIiwidCI6ImZmMGYzZTNhLTNlNTMtNDU0Zi1iMmI1LTZjNjg3NTNiOGVlNCJ9" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+
+    <div class="section">
+  <h2>Insights</h2>
+  <h3 class="subheader">Key Indicators</h3>
+  <ul class="bullet-points">
+    <li>Cumulative Sales: <b>269K</b> worth of drugs sold with <b>£71.31M</b> in revenue and <b>81.97%</b> profit margin indicates excellent profitability.</li>
+    <li>Good revenue to cost ratio indicating controlled costs.</li>
+  </ul>
+  <h3 class="subheader">Trends Over Time</h3>
+  <ul class="bullet-points">
+    <li>Monthly Sales Pattern: Revenue and expenses were steady but spiked during January, July, & September.</li>
+    <li>Profit remained consistent due to proportional cost structure.</li>
+    <li>These peaks may reflect seasonal demand or promotional campaigns.</li>
+    <li>The most profitable year by a wide margin was <b>2023</b> with sales close to <b>£62M</b> and monthly average of <b>£5M</b> as against 
+        other years with sales lower than £4M and monthly average lower than £500K.</li>
+  </ul>
+  <h3 class="subheader">Product (Drugs) Performance</h3>
+  <ul class="bullet-points">
+    <li>Chronic/essential medications (like Doxycycline, Ergocalciferol and Lisinopril) led in revenue contribution.</li>
+    <li>Majority of the buyers of the top performing drugs are resellers(e.g.,hospitals, distributors or pharmacies).
+        They likely have efficient ordering processes, strong relationships with NovaMed,or serve high-demand markets.</li>
+    <li>Top 5 drugs weren’t constant on a year-on-year basis.</li>
+    <li>Warfarin remained the least performing drug over the years in revenue contribution.</li>
+    <li>The top five performing drugs are classed 2, 3, 4, and 5 under the regulatory compliance group.</li>
+  </ul>
+  <h3 class="subheader">Customer Performance</h3>
+  <ul class="bullet-points">
+    <li>David Johnson & Bob Williams were the top customers with revenue contributions and appear multiple times,signifying high-value 
+        repeat customers.</li>
+    <li>Revenue was concentrated around a few high-value customers: Top 10 customers contributed <b>45%</b> to the total revenue, a potential 
+        risk if they churn.</li>
+    <li>Under performing customers may face logistical issues, financial constraints, or reduced market reach. This could also indicate a need 
+        for targeted support or reassessment of business relationships.</li>
+  </ul>
+  <h3 class="subheader">Customer – Revenue Relationship</h3>
+  <ul class="bullet-points">
+    <li>Market penetration was strongest in Australia & Canada regions evidenced in revenue generated.</li>
+    <li>"Sellers" generated significantly higher average revenue (£4K) compared to "Users" (£0.1K), highlighting the 
+        profitability of the seller channel.</li>
+    <li>Heavy reliance on distributors or resellers.</li>
+    <li>Adults and Middle Age groups contributed the most revenue, with females driving higher revenue than males across all age groups.</li>
+    <li>Elder & Youth segments showed lower revenue, possibly due to lower purchasing power or demand.</li>
+    <li>Buyer Type: 73% Seller, 27% User, reinforcing the heavy reliance on sellers.</li>
+  </ul>
+</div>
+
+    <div class="section">
+  <h2>Recommendations</h2>
+  <h3 class="subheader">Optimize Product Portfolio</h3>
+  <ul class="bullet-points">
+    <li>Continuously improve and develop top performing drugs to maintain market-edge & conduct a
+        review of bottom performing with the possibility of phasing them out or improving their market
+        positioning.</li>
+  </ul><h3 class="subheader">Enhance Customer Engagement</h3>
+  <ul class="bullet-points">
+    <li>Strengthen relationships with top-performing customers by offering incentives & tailored support to
+        sustain loyalty while providing training, financial assistance, or logistical support to improve the
+        performance of bottom-performing ones.</li>
+  </ul>
+  <h3 class="subheader">Resource Allocation</h3>
+  <ul class="bullet-points">
+    <li>Redirect marketing and sales resources toward high-potential drugs and customers, while reducing
+        investment in underperforming areas unless turnaround strategies show promise.</li>
+  </ul>
+  <h3 class="subheader">Market Expansion</h3>
+  <ul class="bullet-points">
+    <li>Leverage the strong performance in regions like Australia & Canada by increasing marketing efforts
+        and exploring adjacent markets with similar demographics. Investigate underperforming regions
+        (e.g., outside the top two) to identify barriers and potential growth opportunities.</li>
+  </ul>
+  <h3 class="subheader">Channel Optimization</h3>
+  <ul class="bullet-points">
+    <li>Strengthen partnerships with sellers, who are the primary revenue drivers, by offering incentives or
+        exclusive deals to maintain their dominance. Explore ways to increase direct sales to users (e.g.,
+        online platforms or loyalty programs) to diversify revenue streams and reduce reliance on sellers.</li>
+  </ul>
+</div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Moses Adeyi. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details - Sales Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+    }
+    header {
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 0.4rem;
+    }
+    header h1 {
+      font-size: 1.75rem;
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #00695c;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: #b2dfdb;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ffffff;
+    }
+    section {
+      padding: 0.5rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2, h3 {
+      color: #004d40;
+    }
+    .section {
+      margin-bottom: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 0.6rem;
+      text-align: left;
+    }
+    th {
+      background-color: #004d40;
+      color: white;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      margin-top: 1rem;
+    }
+    .subheader {
+  font-size: 1rem;
+  color: #00695c;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.bullet-points {
+  margin-left: 1.2rem;
+  list-style-type: disc;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.bullet-points li {
+  margin-bottom: 0.4rem;
+}
+.dashboard-screenshot img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.2rem;
+}
+.left-align {
+  text-align: left;
+  color: #004d40;
+  margin-bottom: 1.5rem;
+}
+
+/* Flex container for the business cases */
+.cases {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 0.1rem;
+  overflow-x: auto;
+}
+
+/* Individual case block */
+.case {
+  flex: 1;
+  min-width: 180px;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* Case title styles */
+.case-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  color: #888;
+}
+.case-title.green { color: #2e7d32; }
+.case-title.blue { color: #0288d1; }
+.case-title.indigo { color: #3f51b5; }
+.case-title.red { color: #e53935; }
+
+/* Icon box (upright, not rotated) */
+.icon {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 1.6rem;
+  margin: 0 auto 0.7rem auto;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #b0bec5;
+}
+.icon.green { background-color: #2e7d32; }
+.icon.blue { background-color: #0288d1; }
+.icon.indigo { background-color: #3f51b5; }
+.icon.red { background-color: #e53935; }
+
+/* Text styles */
+.case h3 {
+  font-size: 1rem;
+  color: #004d40;
+  margin: 0.5rem 0 0.3rem;
+}
+.case .desc {
+  font-size: 0.95rem;
+  color: #444;
+}
+.dashboard-video video {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+    footer {
+      text-align: center;
+      padding: 0.4rem;
+      background: #004d40;
+      color: white;
+      font-size: 0.85rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Unlocking Sales & Customer Trends with Excel Dashboards</h1>
+  </header>
+
+  <nav>
+    <a href="index.html#projects">Back to Projects</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
+  <section>
+    <div class="section">
+      <h2>Business Overview</h2>
+      <p>Cafe Harmony is an exciting virtual café that has shown consistent growth over 3 years of existence, serving variety of drinks, snacks and light meals
+        across multiple locations in the city with unique customer preferences.</p>
+    </div>
+
+    <div class="section business-problem">
+  <h2 class="left-align">Business Problem</h2>
+  <div class="cases">
+    <div class="case">
+      <p class="case-title">Case 1</p>
+      <div class="icon gray">🍽️</div>
+      <h3>Menu Performance</h3>
+      <p class="desc">Which top-selling menu product generates the most revenue?</p>
+    </div>
+    <div class="case">
+      <p class="case-title green">Case 2</p>
+      <div class="icon green">👥</div>
+      <h3>Customer Spending</h3>
+      <p class="desc">Which customer demographic (age, gender, or preferred items) is driving the highest sales?</p>
+    </div>
+    <div class="case">
+      <p class="case-title blue">Case 3</p>
+      <div class="icon blue">📊</div>
+      <h3>Stock Management</h3>
+      <p class="desc">Which ingredients or products are most commonly running low across locations?</p>
+    </div>
+    <div class="case">
+      <p class="case-title indigo">Case 4</p>
+      <div class="icon indigo">🧑‍💼</div>
+      <h3>Employee Performance</h3>
+      <p class="desc">Identify which locations or employees are performing above or below the average sales target.</p>
+    </div>
+    <div class="case">
+      <p class="case-title red">Case 5</p>
+      <div class="icon red">💬</div>
+      <h3>Customer Feedback Analysis</h3>
+      <p class="desc">Analyze customer feedback to identify common themes in satisfaction or dissatisfaction.</p>
+    </div>
+  </div>
+  </div>
+
+    <div class="section">
+      <h2>Data Dictionary</h2>
+      <p>Data is in .xlsx format</p>
+
+      <h3>1. Customer Information</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Column Headers</th>
+            <th>Data Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Customer ID</td>
+            <td>Text</td>
+            <td>Unique customer identifier</td>
+          </tr>
+          <tr>
+            <td>Age</td>
+            <td>Numeric</td>
+            <td>Age of the customer</td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>Text</td>
+            <td>Gender of the customer</td>
+          </tr>
+          <tr>
+            <td>Preferred Item</td>
+            <td>Text</td>
+            <td>The item preferred by the customer</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>2. Employee Information</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Column Headers</th>
+            <th>Data Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Employee ID</td>
+            <td>Text</td>
+            <td>Unique identifier for each employee</td>
+          </tr>
+          <tr>
+            <td>Employee Name</td>
+            <td>Text</td>
+            <td>The names of the cafe's employees</td>
+          </tr>
+          <tr>
+            <td>Role</td>
+            <td>Text</td>
+            <td>The roles of the employees</td>
+          </tr>
+          <tr>
+            <tr>
+            <td>Location</td>
+            <td>Text</td>
+            <td>The location of the cafe's employees</td>
+          </tr>
+          <tr>
+            <td>Sales Target</td>
+            <td>Numeric</td>
+            <td>The total sales target assigned by each employee</td>
+          </tr>
+          <tr>
+            <td>Sales Achieved</td>
+            <td>Numeric</td>
+            <td>The total sales achieved by each employee</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>3. Stock Information</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Column Headers</th>
+            <th>Data Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Stock Item</td>
+            <td>Text</td>
+            <td>The name of each stock item</td>
+          </tr>
+          <tr>
+            <td>Current Stock</td>
+            <td>Numeric</td>
+            <td>The current stock level of each item</td>
+          </tr>
+          <tr>
+            <td>Ideal Stock</td>
+            <td>Numeric</td>
+            <td>The ideal stock level of each item</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>4. Feedback Information</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Column Headers</th>
+            <th>Data Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Feedback ID</td>
+            <td>Text</td>
+            <td>Unique identifier for each feedback</td>
+          </tr>
+          <tr>
+            <td>Customer ID</td>
+            <td>Text</td>
+            <td>Unique identifier for each customer</td>
+          </tr>
+          <tr>
+            <td>Sentiment</td>
+            <td>Text</td>
+            <td>The customer sentiment on the item</td>
+          </tr>
+          <tr>
+            <td>Comment</td>
+            <td>Text</td>
+            <td>People's review of each item</td>
+          </tr>
+          <tr>
+            <td>Rating</td>
+            <td>Numeric</td>
+            <td>The numerical rating of each item</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>5. Sales Information</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Column Headers</th>
+            <th>Data Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Sales ID</td>
+            <td>Text</td>
+            <td>Unique identifier for each sale</td>
+          </tr>
+          <tr>
+            <td>Customer ID</td>
+            <td>Text</td>
+            <td>Unique identifier for the customer who made the purchase</td>
+          </tr>
+          <tr>
+            <td>Product Name</td>
+            <td>Text</td>
+            <td>The name of the items the cafe sells</td>
+          </tr>
+          <tr>
+            <td>Quantity Sold</td>
+            <td>Numeric</td>
+            <td>The quantity of the items sold in the transaction</td>
+          </tr>
+          <tr>
+            <td>Price per Unit Sold</td>
+            <td>Numeric</td>
+            <td>The price of each item sold in the transaction</td>
+          </tr>
+          <tr>
+            <td>Location</td>
+            <td>Text</td>
+            <td>The location of the cafe's outlet</td>
+          </tr>
+          <tr>
+            <td>Sales Date</td>
+            <td>Date</td>
+            <td>The date on which the sale occurred</td>
+          </tr>
+          <tr>
+            <td>Total Sales</td>
+            <td>Numeric</td>
+            <td>The total price of the items sold in the transaction</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Dashboard</h2>
+      <!-- Dashboard Image -->
+    <div class="dashboard-screenshot">
+    <img src="Excel1.png" alt="Excel Dashboard Screenshot">
+    </div>
+
+    <!-- Recorded Video Walkthrough -->
+    <div class="dashboard-video">
+    <h3 class="subheader">Dashboard Walkthrough</h3>
+    <video width="100%" height="auto" controls>
+      <source src="videos/excel-dashboard-demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    </div>
+      </div>
+
+    <div class="section">
+  <h2>Insights</h2>
+  <h3 class="subheader">Key Indicators</h3>
+  <ul class="bullet-points">
+    <li>Sales Summary: Over <b>1,000</b> transactions and <b>3,000+</b> units sold generated approximately <b>$12.6K</b> in revenue, with an average customer rating of <b>3.05</b>, 
+       highlighting steady sales performance and room for improved customer satisfaction.</li>
+  </ul>
+  <h3 class="subheader">Sales Movement</h3>
+  <ul class="bullet-points">
+    <li>Across the 3 years sales trend, there is always a deep in September.</li>
+    <li>February is always a pickup month.</li>
+  </ul>
+  <h3 class="subheader">Productivity</h3>
+  <ul class="bullet-points">
+    <li>The most productive year was 2024.</li>
+    <li>Sales was relatively low in the first half of 2025.</li>
+    <li>Average sales kept dropping across the years.</li>
+  </ul>
+  <h3 class="subheader">Case 1 - Menu Performance</h3>
+  <ul class="bullet-points">
+    <li>Muffins witnessed more sales in the Airport area.</li>
+    <li>Iced Tea witnessed more sales in the Downtown area.</li>
+    <li>Muffins witnessed more sales in the Uptown area.</li>
+    <li>Iced Tea witnessed more sales in the Suburbs area.</li>
+  </ul>
+  <h3 class="subheader">Case 2 - Customer Spending</h3>
+  <ul class="bullet-points">
+    <li>Adult age group has the highest purchase.</li>
+    <li>Ladies seem to spend more at the Café than their male counterparts.</li>
+    <li>More units of Cappuccino was sold across all locations.</li>
+  </ul>
+  <h3 class="subheader">Case 3 - Stock Level</h3>
+  <ul class="bullet-points">
+    <li>Popular items like Croissant Dough, Iced Tea Bags, Juice Concentrate, Milk, Muffin Mix and Tea Bags are currently out of stock.</li>
+    <li>Items like Coffee Beans, Sandwich Bread and Sugar might be overstocked.</li>
+    <li>Lemon might just be at the right stock level.</li>
+  </ul>
+  <h3 class="subheader">Case 4 - Employee Performance</h3>
+  <ul class="bullet-points">
+    <li>Top 5 performing employees achieved more than 200% of their individual sales target.</li>
+    <li>The worst performing employees deeped into the organisation's revenue as they made great loss.</li>
+  </ul>
+  <h3 class="subheader">Case 5 - Customer Feedback Analysis</h3>
+  <ul class="bullet-points">
+    <li>Majority of the feedback wasn’t negative.</li>
+    <li>A significant portion of the ratings were neutral or less than satisfied.</li>
+  </ul>
+</div>
+
+    <div class="section">
+  <h2>Recommendations</h2>
+  <!-- <h3 class="subheader">Optimize Product Portfolio</h3> -->
+  <ul class="bullet-points">
+    <li>Apply the initiative adopted in February across othe rmonths to drive up sales.</li>
+    <li>Continue to drive sales of Muffins & Iced Tea in various locations while creating incentives to upscale other items.</li>
+    <li>Issue out surveys to customers to gather qualitative data in order to identify product or service aspects needing
+      improving in product quality, service delivery & customer support.</li>
+    <li>Introduce promotions in the month of September to address the deeps.</li>
+    <li>Increase stocking popular items by atleast 15% of their ideal stocklevels.</li>
+    <li>Decrease over stocking some other items by 15% of their current stock levels.</li>
+  </ul>
+  
+</div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Moses Adeyi. All rights reserved.</p>
+  </footer>
+</body>
+</html>
