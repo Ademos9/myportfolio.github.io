@@ -165,11 +165,9 @@
   margin: 40px auto;
   max-width: 1000px;
 }
-.dashboard-slideshow iframe,
 .dashboard-slideshow img {
   width: 100%;
-  height: 600px;
-  border: none;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
@@ -254,7 +252,7 @@
   </div>
   </div>
   <div class="dashboard-slideshow">
-  <div id="dashboardContainer" class="fade"></div>
+  <img id="dashboardImage" class="fade show" src="images/dashboard1.png" alt="Dashboard Screenshot">
   </div>
   </section>
 
@@ -291,37 +289,24 @@
   </script>
   <script>
   const dashboards = [
-    { type: "iframe", src: "https://app.powerbi.com/view?r=eyJrIjoiN2Q2NTg0NGItMGQzOS00NTM1LWIzNWYtMTZkYzVjMTIzNDNiIiwidCI6ImZmMGYzZTNhLTNlNTMtNDU0Zi1iMmI1LTZjNjg3NTNiOGVlNCJ9" },
-    { type: "iframe", src: "https://public.tableau.com/views/RegionalSampleWorkbook/Storms" },
-    { type: "image", src: "Excel1.png" }
+    "images/dashboard1.png",
+    "images/dashboard2.png",
+    "images/dashboard3.png"
   ];
 
   let currentIndex = 0;
-  const container = document.getElementById("dashboardContainer");
-
-  function loadDashboard(index) {
-    container.classList.remove("show");
-    setTimeout(() => {
-      const dashboard = dashboards[index];
-      if (dashboard.type === "iframe") {
-        container.innerHTML = `<iframe src="${dashboard.src}" allowfullscreen></iframe>`;
-      } else if (dashboard.type === "image") {
-        container.innerHTML = `<img src="${dashboard.src}" alt="Excel Dashboard">`;
-      }
-      container.classList.add("show");
-    }, 500); // fade out before change
-  }
+  const dashboardImage = document.getElementById("dashboardImage");
 
   function changeDashboard() {
-    currentIndex = (currentIndex + 1) % dashboards.length;
-    loadDashboard(currentIndex);
+    dashboardImage.classList.remove("show");
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % dashboards.length;
+      dashboardImage.src = dashboards[currentIndex];
+      dashboardImage.classList.add("show");
+    }, 500); // matches fade-out time
   }
 
-  // Initial load with fade
-  loadDashboard(currentIndex);
-
-  // Change every 10 seconds
-  setInterval(changeDashboard, 10000);
+  setInterval(changeDashboard, 10000); // change every 10 seconds
 </script>
 </body>
 </html>
