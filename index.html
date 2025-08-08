@@ -244,8 +244,8 @@
     <p>Used SQL and Power BI to analyze churn rates and develop dashboards for business strategy meetings.</p>
     <a href="#" class="btn">View Project</a>
   </div>
-  <div class="project-card" data-type="R">
-    <img src="https://via.placeholder.com/400x200?text=Python+Scraper" alt="R Project">
+  <div class="project-card" data-type="R powerbi">
+    <img src="https://via.placeholder.com/400x200?text=Python+Scraper" alt="R & Power BI Project">
     <h3>Job Market Web Scraper</h3>
     <p>Built a Python scraper for job listings and visualized demand by role and skills using Tableau.</p>
     <a href="#" class="btn">View Project</a>
@@ -276,16 +276,17 @@
   </footer>
 
   <script>
-    function filterProjects(type) {
-      const projects = document.querySelectorAll('.project-card');
-      projects.forEach(card => {
-        if (type === 'all' || card.getAttribute('data-type') === type) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+  function filterProjects(type) {
+  const projects = document.querySelectorAll('.project-card');
+  projects.forEach(project => {
+    const types = project.getAttribute('data-type').split(" "); // split into array
+    if (type === 'all' || types.includes(type)) {
+      project.style.display = 'block';
+    } else {
+      project.style.display = 'none';
     }
+  });
+  }
   </script>
   <script>
   const dashboards = [
