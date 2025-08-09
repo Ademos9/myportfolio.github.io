@@ -167,9 +167,11 @@
 }
 .dashboard-slideshow img {
   width: 100%;
-  height: auto;
+  height: 400px; /* fixed height */
+  object-fit: contain; /* keeps full image visible */
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background-color: #f9f9f9; /* optional to fill empty space */
 }
 .fade {
   opacity: 0;
