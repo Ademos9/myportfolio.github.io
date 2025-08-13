@@ -172,7 +172,17 @@
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   background-color: #f9f9f9; /* optional to fill empty space */
-}
+  }
+  .dashboard-section {
+    max-width: 1000px;
+    margin: 40px auto 60px auto; /* spacing before and after */
+    text-align: center;
+  }
+  .dashboard-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+  }
 .fade {
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -219,10 +229,13 @@
   </div>
   </div>
 
-  <section id="projects">
-    <div class="dashboard-slideshow">
+  <section class="dashboard-section">
+  <h2>Dashboard Highlights</h2>
+  <div class="dashboard-slideshow">
     <img id="dashboardImage" class="fade show" src="Dashboards/powerbi1.png" alt="Dashboard Screenshot">
-    </div>
+  </div>
+  </section>
+  <section id="projects">
     <h2>Featured Projects</h2>
     <div class="filter-buttons">
       <button onclick="filterProjects('all')">All</button>
