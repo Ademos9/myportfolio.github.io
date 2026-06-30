@@ -96,8 +96,17 @@
       color: white;
       font-size: 0.85rem;
       margin-top: 2rem;
+}
+    .arrow-list {
+  /* Replaces the disc with a custom modern arrow SVG */
+  list-style-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='m12 5 7 7-7 7'/%3E%3C/svg%3E");
     }
-  </style>
+
+/* Optional: Adds a tiny bit of extra breathing room between the SVG arrow and the text */
+.arrow-list li {
+  padding-left: 0.5rem;
+}
+</style>
 </head>
 <body>
   <header>
@@ -115,8 +124,8 @@
       <h2>Business Overview</h2>
       <p>Afritech Electronics Ltd operates in the global consumer electronics industry with innovationsin smartphones, tablets & wearable technologies.
         Workforce of 200 employees & celebrated milestones below: </p>
-      <ul class="bullet-points">
-        <p>2017 - Launched first flagship smartphone series</p>
+      <ul class="bullet-points arrow-list">
+        <li>2017 - Launched first flagship smartphone series</li>
         <li>2019 - Expanded to include wearable technologies</li>
         <li>2021 - Introduced AI driven features</li>
         <li>2022 - Achieved annual revenue of $2 million (Highest)</li>
