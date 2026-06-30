@@ -110,10 +110,10 @@
       font-size: 0.9rem;
     }
     .project-card img {
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 0.6rem;
-}
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 0.6rem;
+    }
     .project-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
@@ -124,7 +124,10 @@
       color: #004d40;
     }
     .project-card[data-type] {
-      display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
     }
     .btn {
       display: inline-block;
